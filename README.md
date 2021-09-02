@@ -1,5 +1,4 @@
 <b>Input</b><br/><br/>
-
 P p1 = new P("P1",1,3,5);<br/>
 P p2 = new P("P2",2,8,10);<br/>
 P p3 = new P("P3",3,4,4);<br/>
@@ -11,7 +10,6 @@ p1.day = 55;<br/>
 p4.day = 70;<br/>
 p5.day = 85;<br/>
 p6.day = 100;<br/>
-<br/>
 <br/>
 <b>Output</b><br/><br/>
 Congratulations! Solution has been found!<br/>
