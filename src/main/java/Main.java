@@ -20,7 +20,8 @@ public class Main {
         P p5 = new P("P5",4,4,8);
         P p6 = new P("P6",1,1,1);
 
-        p1.day = 55;
+        p1.day = 50;
+        p2.day = 58;
         p4.day = 70;
         p5.day = 85;
         p6.day = 100;
@@ -75,6 +76,9 @@ public class Main {
                 model.arithm(model.intMinusView(pTimeMap.get(p))
                         .add(pTimeMap.get(dp)).add(dMin).intVar(),">=", p.min).post();
                 model.arithm(dStdM,"<=", p.std).post();
+
+                model.arithm(pTimeMap.get(p), "!=", pTimeMap.get(dp)).post();
+                model.arithm(pTimeMap.get(dp).sub(pTimeMap.get(p)).intVar(), ">=", p.min).post();
 
                 if (goal == null) {
                     goal = model.intVar(0);
